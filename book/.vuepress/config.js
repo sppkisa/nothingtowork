@@ -1,4 +1,4 @@
-import { WebpackConfiguration, webpackBundler } from "@vuepress/bundler-webpack";
+import {webpackBundler } from "@vuepress/bundler-webpack";
 import { defineUserConfig } from "vuepress";
 import theme from "./theme.js";
 // @ts-ignore
@@ -45,19 +45,19 @@ export default defineUserConfig({
   shouldPrefetch: false,
 
   // 修改 webpack 配置
-  bundler: webpackBundler({
-    configureWebpack: (config, isServer, isBuild) => {
-      config.devtool = "eval-source-map"; // 开发环境调试时浏览器展示源码（好像不生效）
-      config.plugins?.push(
-          new CopyPlugin({
-            patterns: [
-              {
-                from: path.resolve(process.cwd(), "./CNAME"),
-                to: ".",
-              },
-            ],
-          })
-      );
-    }
-  }),
+  // bundler: webpackBundler({
+  //   configureWebpack: (config, isServer, isBuild) => {
+  //     config.devtool = "eval-source-map"; // 开发环境调试时浏览器展示源码（好像不生效）
+  //     config.plugins?.push(
+  //         new CopyPlugin({
+  //           patterns: [
+  //             {
+  //               from: path.resolve(process.cwd(), "./CNAME"),
+  //               to: ".",
+  //             },
+  //           ],
+  //         })
+  //     );
+  //   }
+  // }),
 });
