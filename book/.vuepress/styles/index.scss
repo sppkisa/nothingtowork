@@ -1,0 +1,62 @@
+// place your custom styles here
+@import "./config";
+
+// 行内代码块，加粗，斜体都采用主题色
+code, strong, em {
+  color: $theme-color; // 代码块颜色
+}
+
+/* 设置选中文本时的颜色 */
+::selection {
+  background: $theme-color;
+  color: #eee;
+}
+
+/* 文章每级标题下方加入横线（模仿h2自带的样式） */
+h2, h3, h4, h5, h6 {
+  border-bottom: 1px solid #eaecef;
+}
+
+/* 列表元素的开头空两个字符 */
+ol, ul {
+  padding-inline-start: 2em;
+}
+
+/* 表格居中对齐 */
+table {
+  display: table;
+  margin: auto;
+}
+
+/* 图片居中显示 */
+.theme-hope-content img, .vp-article-excerpt img {
+  display: block;
+  margin: auto;
+}
+
+/* 表格里的图片不能在页面中盲目扩张 */
+.theme-hope-content table img {
+  max-width: 100%;
+}
+
+/* markdown中有序列表中序号表示符，第 1~4 级依次设定为阿拉伯数字、小写英文字母、小写罗马字母、小写希腊字母 */
+ol {
+  list-style-type: decimal;
+
+  ol {
+    list-style-type: lower-alpha;
+
+    ol {
+      list-style-type: lower-roman;
+
+      ol {
+        list-style-type: lower-greek;
+
+      }
+    }
+  }
+}
+
+ul:last-child, ol:last-child {
+  margin-bottom: 0;
+}
