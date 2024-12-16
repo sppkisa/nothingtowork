@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  notebook:
+    image: hub.atomgit.com/library/nginx:1.24-bullseye-perl
+    #    build:
+    #      context: ./
+    #      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+      - "443:443"
+    container_name: notebook
+    volumes:
+      - ../../book/.vuepress/dist/:/usr/share/nginx/notebook/
+      - ../img/:/usr/share/nginx/figure-bed/
+      - ./notebook.conf:/etc/nginx/conf.d/notebook.conf
+      - ./figure-bed.conf:/etc/nginx/conf.d/figure-bed.conf
+      - ./ssl:/etc/nginx/ssl
+    environment:
+      NOTEBOOK_ENV: prd # no use
+    cap_add:
+      - SYS_PTRACE

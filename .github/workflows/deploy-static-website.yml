@@ -1,0 +1,58 @@
+name: build & deploy it as a static website
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+    types:
+      - closed
+
+jobs:
+  build-and-deploy:
+    if: github.event_name == 'push' || github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # 想要“最近更新时间”等 git 日志相关信息，需要拉取全部提交记录
+
+      - name: Install pnpm, then install dependencies immediately
+        uses: pnpm/action-setup@v2
+        with:
+          run_install: true
+          version: 8
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 22.x # latest
+          # cache: pnpm
+
+      - name: Build the project
+        env:
+          NODE_OPTIONS: --max_old_space_size=8192
+        run: |
+          pnpm run docs:build
+          > book/.vuepress/dist/.nojekyll
+
+      - name: Deploy to Aliyun ECS
+        uses: easingthemes/ssh-deploy@master
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.ALIYUN_SSH_PRIVATE_KEY }}
+          REMOTE_HOST: ${{ secrets.ALIYUN_HOST }}
+          REMOTE_USER: ${{ secrets.ALIYUN_USER }}
+          ARGS: "-avzr --delete"
+          SOURCE: book/.vuepress/dist/
+          TARGET: ${{ secrets.ALIYUN_DEPLOY_TARGET }}
+
+      - name: Deploy to the github pages
+        uses: peaceiris/actions-gh-pages@v3 # 使用第三方 Action 把构建完成的 Artifact 部署到指定分支
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages # default
+          publish_dir: book/.vuepress/dist  # default: public
+          force_orphan: true # 发布至目标分支时，将该分支中的历史提交强制清空
