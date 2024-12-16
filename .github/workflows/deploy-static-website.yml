@@ -48,11 +48,3 @@ jobs:
           ARGS: "-avzr --delete"
           SOURCE: book/.vuepress/dist/
           TARGET: ${{ secrets.ALIYUN_DEPLOY_TARGET }}
-
-      - name: Deploy to the github pages
-        uses: peaceiris/actions-gh-pages@v3 # 使用第三方 Action 把构建完成的 Artifact 部署到指定分支
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: gh-pages # default
-          publish_dir: book/.vuepress/dist  # default: public
-          force_orphan: true # 发布至目标分支时，将该分支中的历史提交强制清空
