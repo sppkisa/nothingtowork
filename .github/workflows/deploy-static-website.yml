@@ -40,7 +40,7 @@ jobs:
           > book/.vuepress/dist/.nojekyll
 
       - name: Deploy to Aliyun ECS
-        uses: easingthemes/ssh-deploy@master
+        uses: easingthemes/ssh-deploy@main
         env:
           SSH_PRIVATE_KEY: ${{ secrets.ALIYUN_SSH_PRIVATE_KEY }}
           REMOTE_HOST: ${{ secrets.ALIYUN_HOST }}
