@@ -3,15 +3,15 @@ title: book
 icon: /favicon.ico
 home: true
 layout: BlogHome
-heroImage: https://figure-bed.chua-n.com/logo/wukong.jpg
-heroText: 应无所住，而生其心
-tagline: 借鉴 OneNote 书本式的笔记方案，使用 VuePress 搭建自己的笔记兼博客系统。
+#heroImage: /icon/logo.png
+heroText: 道阻且长，行则将至
+tagline: 基于 VuePress-hope 搭建自己的笔记兼博客系统。
 heroImageStyle:
-  - border-radius: 50%
-  - width: 200px
-  - height: 200px
-bgImage: //figure-bed.chua-n.com/IMG_20220910_151958.jpg
-bgImageDark: //figure-bed.chua-n.com/IMG_20231008_203323.jpg
+  - border-radius: 10%
+  - width: 419px
+  - height: 155px
+bgImage: /image/mountain.jpg
+bgImageDark: /image/joker.jpg
 heroFullScreen: true
 footer: <a href="https://beian.miit.gov.cn" target="_blank">陕ICP备2024034563号</a>
 projects:

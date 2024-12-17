@@ -10,7 +10,7 @@ export default hopeTheme(
   {
     hostname: "https://nothingtowork.fun",
     author: {
-      name: "四月小记",
+      name: "行歌",
       url: "https://nothingtowork.fun",
       email: "sppkisa@163.com",
     },
