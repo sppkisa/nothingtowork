@@ -14,7 +14,7 @@ export default defineUserConfig({
   port: 9999,
 
   lang: "zh-CN",
-  title: "荒流的笔趣屋",
+  title: "四月小记",
   description: "这是我用 vuepress 工具生成的笔记，采用 vuepress-theme-hope 主题，简单好用，采用 Markdown 编写，像书本一样展示。",
 
   head: [

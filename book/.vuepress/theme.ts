@@ -4,13 +4,15 @@ import sidebar from "./sidebar";
 import { Page } from "vuepress";
 import { cut } from "nodejs-jieba";
 
+// @ts-ignore
+// @ts-ignore
 export default hopeTheme(
   {
-    hostname: "https://chua-n.com",
+    hostname: "https://nothingtowork.fun",
     author: {
-      name: "荒流",
-      url: "https://chua-n.com",
-      email: "chua_n@qq.com",
+      name: "四月小记",
+      url: "https://nothingtowork.fun",
+      email: "sppkisa@163.com",
     },
 
     darkmode: "switch",
@@ -18,8 +20,8 @@ export default hopeTheme(
     // pure: true,
     iconAssets: "//at.alicdn.com/t/c/font_4437669_qqcrya8ybtj.css",
     // iconPrefix: ???
-    logo: "https://figure-bed.chua-n.com/logo/荒流.png",
-    favicon: "https://figure-bed.chua-n.com/logo/川.ico",
+    logo: "/icon/logo.png",
+    favicon: "/favicon.ico",
 
     // 是否使用 RTL 布局
     rtl: false,
@@ -59,18 +61,18 @@ export default hopeTheme(
     docsDir: "book",
 
     // 页脚
-    footer: "应无所住，而生其心",
+    footer: "道阻且长，行则将至",
     displayFooter: true,
 
     blog: {
-      name: "荒流",
-      description: "应无所住，而生其心",
-      avatar: "https://figure-bed.chua-n.com/logo/wukong.jpg",
+      name: "四月小记",
+      description: "道阻且长，行则将至",
+      avatar: "/image/打拳黄豆.gif",
       roundAvatar: true,
       intro: "/about",
       medias: {
-        Email: "mailto:chua_n@qq.com",
-        Github: "https://github.com/chua-n",
+        Email: "mailto:sppkisa@163.com",
+        Github: "https://github.com/sppkisa",
       },
       sidebarDisplay: "mobile",
       articlePerPage: 5,
@@ -101,10 +103,10 @@ export default hopeTheme(
       // 评论服务
       comment: {
         provider: "Giscus",
-        repo: "chua-n/chua-n.github.io",
-        repoId: "MDEwOlJlcG9zaXRvcnkzODUxMDYyNTk=",
+        repo: "sppkisa/nothingtowork",
+        repoId: "R_kgDONbdlkw",
         category: "Announcements",
-        categoryId: "DIC_kwDOFvRBU84CdT13",
+        categoryId: "DIC_kwDONbdlk84ClSVj",
       },
 
       components: {
@@ -252,38 +254,38 @@ export default hopeTheme(
         appendBase: true,
         showInstall: true,
         apple: {
-          icon: "/assets/icon/logo-apple-152.png",
+          icon: "/icon/logo-apple-152.png",
           statusBarColor: "black",
         },
         msTile: {
-          image: "/assets/icon/logo-ms-144.png",
+          image: "/icon/logo-ms-144.png",
           color: "#ffffff",
         },
         manifest: {
-          short_name: "荒流",
+          short_name: "行歌",
           icons: [
             {
-              src: "/assets/icon/logo-512.png",
+              src: "/icon/logo-512.png",
               sizes: "512x512",
               type: "image/png",
             },
             {
-              src: "/assets/icon/logo-192.png",
+              src: "/icon/logo-192.png",
               sizes: "192x192",
               type: "image/png",
             },
             {
-              src: "/assets/icon/logo-apple-152.png",
+              src: "/icon/logo-apple-152.png",
               sizes: "152x152",
               type: "image/png",
             },
             {
-              src: "/assets/icon/logo-32.png",
+              src: "/icon/logo-32.png",
               sizes: "32x32",
               type: "image/png",
             },
             {
-              src: "/assets/icon/logo-16.png",
+              src: "/icon/logo-16.png",
               sizes: "16x16",
               type: "image/png",
             },
