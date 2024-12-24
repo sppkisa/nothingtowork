@@ -13,7 +13,7 @@ heroImageStyle:
 bgImage: /image/mountain.jpg
 bgImageDark: /image/joker.jpg
 heroFullScreen: true
-footer: <a href="https://beian.miit.gov.cn" target="_blank">陕ICP备2024034563号</a>
+footer: <a href="https://beian.miit.gov.cn" target="_blank">陕ICP备2024057022号</a>
 projects:
   - name: JavaWeb
     desc: 涉及 Web 后端基础知识、Spring 框架、Spring-Cloud 体系、MyBatis...
