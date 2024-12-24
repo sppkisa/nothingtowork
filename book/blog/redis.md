@@ -28,13 +28,49 @@ star: true
 
    - 加之`bgsave`的频率设置的太高导致频繁进行落库
 
+     - save 900 1
+       save 300 10
+       save 60 10000
+
    - 分析下大内存的key？
 
-     ```
-     redis-cli -h 127.0.0.1 -p 6379 -a "password" --bigkeys
-     ```
+     > redis-cli -h 127.0.0.1 -p 6379 -a "password" --bigkeys
 
-     
+3. 解决 : 修改`redis.conf`，移除掉**rdb**方式的后台备份，更换为**AOF**方式备份
+
+   - 删除上述save指令
+   - 设置`stop-writes-on-bgsave-error`为`no`
+   - 设置`appendonly`为`yes`
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
 
    
 
