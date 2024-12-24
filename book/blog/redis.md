@@ -1,4 +1,11 @@
-# redis
+---
+title: redis生产问题追踪
+date: 2024-12-24 15:58:39
+category: redis
+tag: 生产技法
+sticky: true
+star: true
+---
 
 ## redis
 
