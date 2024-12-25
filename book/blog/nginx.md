@@ -1,6 +1,6 @@
 ---
 title: nginx语法
-date: 2024-12-24 17:42:39
+date: 2024-12-25 17:42:39
 category: 服务器
 tag: nginx
 ---

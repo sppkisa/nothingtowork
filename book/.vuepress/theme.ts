@@ -35,7 +35,7 @@ export default hopeTheme(
       end: ["Language", "Outlook", "Repo", "Search"]
     },
     // navTitle: "what the fuck?",
-    repo: "chua-n/chua-n.github.io",
+    repo: "sppkisa/nothingtowork",
     navbarAutoHide: "mobile",
 
     // 侧边栏
@@ -77,7 +77,7 @@ export default hopeTheme(
       sidebarDisplay: "mobile",
       articlePerPage: 5,
       articleInfo: ["Author", "Original", "Date", "Category", "Tag", "ReadingTime", "Word", "PageView"],
-      timeline: "昨个儿不在",
+      timeline: "昨日不在",
     },
 
     // 加密配置
