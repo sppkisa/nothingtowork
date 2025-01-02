@@ -19,6 +19,10 @@ projects:
     desc: 涉及 Web 后端基础知识、Spring 框架、Spring-Cloud 体系、MyBatis...
     icon: web
     link: /JavaWeb/
+  - name: Java
+    desc: Java基础与相关套件
+    icon: java
+    link: /Java/
   - name: 计算机网络
     desc: 计算机网络知识笔记，看上去要学的真不多，但遇到的困难真不少
     icon: computer-network
